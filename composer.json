@@ -1,9 +1,18 @@
 {
     "name": "nojacko/email-validator",
     "description": "Email Validator",
+    "authors": [
+        {
+            "name": "James Jackson",
+            "email": "nojacko@gmail.com",
+            "homepage": "http://jamesdavidjackson.com",
+            "role": "Developer"
+        }
+    ],
     "autoload" : {
         "psr-4" : {
             "EmailValidator\\": "src/"
         }
-    }
+    },
+    "license": "MIT"
 }
