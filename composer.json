@@ -1,0 +1,9 @@
+{
+    "name": "nojacko/email-validator",
+    "description": "Email Validator",
+    "autoload" : {
+        "psr-4" : {
+            "EmailValidator\\": "src/"
+        }
+    }
+}
