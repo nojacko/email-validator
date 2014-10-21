@@ -53,6 +53,42 @@ class Validator
     ];
 
     /**
+     * Validate an email address using ALL the functions of this library.
+     *
+     * @param string $email Address
+     * @return boolean
+     */
+    public function isValid($email)
+    {
+        // Looks like an email address
+        if (! $this->isEmailAddress($email)) {
+            return false;
+        }
+
+        // Looks like an email address
+        if ($this->isExample($email)) {
+            return false;
+        }
+
+        // Looks like an email address
+        if ($this->isDisposable($email)) {
+            return false;
+        }
+
+        // Looks like an email address
+        if ($this->isRole($email)) {
+            return false;
+        }
+
+        // Looks like an email address
+        if (! $this->hasMx($email)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
      * Valid email
      * Due complexity of email validation (non-latin chars, ", ...), this is VERY simple.
      *
@@ -60,7 +96,7 @@ class Validator
      * Note: webmaster@localhost won't be valid
      *
      * @param string $email Address
-     * @return boolean|null
+     * @return boolean
      */
     public function isEmailAddress($email)
     {
