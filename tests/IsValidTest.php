@@ -21,7 +21,7 @@ class IsValidTest extends PHPUnit_Framework_TestCase
     {
         $this->setupTest();
 
-        // Fails isEmailAddress
+        // Fails isEmail
         $this->assertFalse(
             $this->validator->isValid('example.com')
         );

@@ -61,7 +61,7 @@ class Validator
     public function isValid($email)
     {
         // Looks like an email address
-        if (! $this->isEmailAddress($email)) {
+        if (! $this->isEmail($email)) {
             return false;
         }
 
@@ -98,7 +98,7 @@ class Validator
      * @param string $email Address
      * @return boolean
      */
-    public function isEmailAddress($email)
+    public function isEmail($email)
     {
         return (bool) preg_match('/^.+@.+\..+$/i', $email);
     }
@@ -112,7 +112,7 @@ class Validator
      */
     public function isExample($email)
     {
-        if (! $this->isEmailAddress($email)) {
+        if (! $this->isEmail($email)) {
             return null;
         }
 
@@ -146,7 +146,7 @@ class Validator
      */
     public function isDisposable($email)
     {
-        if (! $this->isEmailAddress($email)) {
+        if (! $this->isEmail($email)) {
             return null;
         }
 
@@ -178,7 +178,7 @@ class Validator
      */
     public function isRole($email)
     {
-        if (! $this->isEmailAddress($email)) {
+        if (! $this->isEmail($email)) {
             return null;
         }
 
@@ -209,7 +209,7 @@ class Validator
      */
     public function hasMx($email)
     {
-        if (! $this->isEmailAddress($email)) {
+        if (! $this->isEmail($email)) {
             return null;
         }
 
