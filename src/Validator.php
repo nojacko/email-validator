@@ -18,6 +18,14 @@ class Validator
     private $disposable = null;
 
     /**
+     * An array of role email users. Populated when required.
+     *
+     * @var mixed
+     * @access private
+     */
+    private $role = null;
+
+    /**
      * An array of example TLDs.
      * As defined in http://tools.ietf.org/html/rfc2606
      *
@@ -124,6 +132,51 @@ class Validator
             }
 
             return false;
+        }
+
+        return null;
+    }
+
+    /**
+     * Detected role based email addresses
+     *
+     * @param string $email Address
+     * @return boolean|null
+     */
+    public function isRole($email)
+    {
+        $user = $this->userFromEmail($email);
+
+        if ($user) {
+            // Load disposable domains
+            if (is_null($this->role)) {
+                $this->role = include('data/role.php');
+            }
+
+            // Search array for hostname
+            if (in_array($user, $this->role)) {
+                return true;
+            }
+
+            return false;
+        }
+
+        return null;
+    }
+
+    /**
+     * Get the user form an email address
+     *
+     * @access private
+     * @param string $email Address
+     * @return string|null
+     */
+    private function userFromEmail($email)
+    {
+        $parts = explode('@', $email);
+
+        if (count($parts) == 2) {
+            return strtolower($parts[0]);
         }
 
         return null;
