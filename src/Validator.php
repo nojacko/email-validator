@@ -53,6 +53,21 @@ class Validator
     ];
 
     /**
+     * Valid email
+     * Due complexity of email validation (non-latin chars, ", ...), this is VERY simple.
+     *
+     * Rule: ANYTHING@ANYTHING.ANYTHING
+     * Note: webmaster@localhost won't be valid
+     *
+     * @param string $email Address
+     * @return boolean|null
+     */
+    public function isEmailAddress($email)
+    {
+        return (bool) preg_match('/^.+@.+\..+$/i', $email);
+    }
+
+    /**
      * Detected example email addresses.
      * As defined in http://tools.ietf.org/html/rfc2606
      *
