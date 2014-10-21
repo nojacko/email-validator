@@ -31,10 +31,6 @@ class HasMxTest extends PHPUnit_Framework_TestCase
             $this->validator->hasMx('example@example.com')
         );
 
-        $this->assertFalse(
-            $this->validator->hasMx('example@localhost')
-        );
-
         // Records
         $this->assertTrue(
             $this->validator->hasMx('example@gmail.com')

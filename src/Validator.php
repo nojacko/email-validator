@@ -76,8 +76,11 @@ class Validator
      */
     public function isExample($email)
     {
-        $hostname = $this->hostnameFromEmail($email);
+        if (! $this->isEmailAddress($email)) {
+            return null;
+        }
 
+        $hostname = $this->hostnameFromEmail($email);
 
         if ($hostname) {
             if (in_array($hostname, $this->exampleDomains)) {
@@ -107,6 +110,10 @@ class Validator
      */
     public function hasMx($email)
     {
+        if (! $this->isEmailAddress($email)) {
+            return null;
+        }
+
         $hostname = $this->hostnameFromEmail($email);
 
         if ($hostname) {
@@ -132,6 +139,10 @@ class Validator
      */
     public function isDisposable($email)
     {
+        if (! $this->isEmailAddress($email)) {
+            return null;
+        }
+
         $hostname = $this->hostnameFromEmail($email);
 
         if ($hostname) {
@@ -160,6 +171,10 @@ class Validator
      */
     public function isRole($email)
     {
+        if (! $this->isEmailAddress($email)) {
+            return null;
+        }
+
         $user = $this->userFromEmail($email);
 
         if ($user) {
