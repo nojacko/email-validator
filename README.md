@@ -1,11 +1,11 @@
-# Email Validator
+# Email Validator (beta)
 
 A small library to valid email addresses using a number of methods.
 
 ## Install
 ### Composer
 ```
-"nojacko/email-validator": "1.0.0"
+"nojacko/email-validator": "*"
 ```
 
 ## Usage 
