@@ -139,35 +139,6 @@ class Validator
     }
 
     /**
-     * Test email address for MX records
-     *
-     * @param string $email Address
-     * @return boolean|null
-     */
-    public function hasMx($email)
-    {
-        if (! $this->isEmailAddress($email)) {
-            return null;
-        }
-
-        $hostname = $this->hostnameFromEmail($email);
-
-        if ($hostname) {
-            $mxhosts = [];
-
-            getmxrr($hostname, $mxhosts);
-
-            if (is_array($mxhosts) && !empty($mxhosts)) {
-                return true;
-            }
-
-            return false;
-        }
-
-        return null;
-    }
-
-    /**
      * Detected disposable email domains
      *
      * @param string $email Address
@@ -229,6 +200,38 @@ class Validator
 
         return null;
     }
+
+    /**
+     * Test email address for MX records
+     *
+     * @param string $email Address
+     * @return boolean|null
+     */
+    public function hasMx($email)
+    {
+        if (! $this->isEmailAddress($email)) {
+            return null;
+        }
+
+        $hostname = $this->hostnameFromEmail($email);
+
+        if ($hostname) {
+            $mxhosts = [];
+
+            getmxrr($hostname, $mxhosts);
+
+            if (is_array($mxhosts) && !empty($mxhosts)) {
+                return true;
+            }
+
+            return false;
+        }
+
+        return null;
+    }
+
+
+    // Private Functions
 
     /**
      * Get the user form an email address
