@@ -13,7 +13,7 @@ class HasMxTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test isExample
+     * Test hasMx
      *
      * @cover \EmailValidator\Validator::hasMx
      */
