@@ -57,11 +57,18 @@ $validator->hasMx('example@gmail.com');                 // true
 $validator->hasMx('example.com);                        // null
 ```
 
+## Testing
+
+Test are all located in ```tests``` folder.
+
+Run tests with phpunit. In root folder, execute ```phpunit``` in a CLI.
+
+
 ## Contribute
 
 * Fork it
-* Write tests
-* Write code (follow PSR-2 standards)
+* Write tests ([Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development))
+* Write code (Follow [PSR-2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md))
 * Submit pull request
 
 ## License
