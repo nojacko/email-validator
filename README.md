@@ -9,36 +9,52 @@ A small library to valid email addresses using a number of methods.
 ```
 
 ## Usage 
+### Main Function
 
-The functions:
+* ```isValid($email)``` is the main function and it'll run all the tests within this library. Returns true or false.
 
-* ```isExample()```
-* ```hasMx()```
-* ```isDisposable()```
+### Other Functions
+If you want more find gain controll, use theses function seperately. 
 
-All 3 functions return:
+* ```isEmail($email)``` Note: returns true or false only.
+* ```isExample($email)```
+* ```isDisposable($email)```
+* ```isRole($email)```
+* ```hasMx($email)```
+
+These functions take a single argument (an email address) and return:
 
 * true, when function name is satisfied.
 * false, when function name is not satisfied.
 * null, when check is not possible, i.e. an invalid email is given.
 
 
-## Example
+## Examples
 
 ```
 $validator = new \EmailValidator\Validator();
+
+$validator->isValid('example@gmail.com');               // true
+$validator->isValid('example@example');                 // false
+
+$validator->isEmail('example@example.com');             // true
+$validator->isEmail('example@example');                 // false
 
 $validator->isExample('example@example.com');           // true
 $validator->isExample('example@gmail.com');             // false
 $validator->isExample('example.com);                    // null
 
-$validator->hasMx('example@example.com');               // false
-$validator->hasMx('example@gmail.com');                 // true
-$validator->hasMx('example.com);                        // null
-
 $validator->isDisposable('example@example.com');        // false
 $validator->isDisposable('example@mailinater.com');     // true
 $validator->isDisposable('example.com);                 // null
+
+$validator->isRole('example@example.com');              // false
+$validator->isRole('abuse@example.com');                // true
+$validator->isRole('example.com);                       // null
+
+$validator->hasMx('example@example.com');               // false
+$validator->hasMx('example@gmail.com');                 // true
+$validator->hasMx('example.com);                        // null
 ```
 
 ## Contribute
