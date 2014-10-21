@@ -1,6 +1,14 @@
 # Email Validator (beta)
 
-A small library to valid email addresses using a number of methods.
+Small PHP library to valid email addresses using a number of methods. 
+
+## Features
+
+* Validates email address
+* Checks for **example** domains (e.g. example.com)
+* Checks for **disposable** email domains (e.g. mailinator.com)
+* Checks for **role-based** addresses (e.g. abuse@)
+* Checks for **MX records** (i.e. can receive email)
 
 ## Install
 ### Composer
@@ -14,7 +22,7 @@ A small library to valid email addresses using a number of methods.
 * ```isValid($email)``` is the main function and it'll run all the tests within this library. Returns true or false.
 
 ### Other Functions
-If you want more find gain controll, use theses function seperately. 
+If you want more control, use these functions seperately. 
 
 * ```isEmail($email)``` Note: returns true or false only.
 * ```isExample($email)```
