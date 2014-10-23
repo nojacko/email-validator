@@ -216,15 +216,7 @@ class Validator
         $hostname = $this->hostnameFromEmail($email);
 
         if ($hostname) {
-            $mxhosts = [];
-
-            getmxrr($hostname, $mxhosts);
-
-            if (is_array($mxhosts) && !empty($mxhosts)) {
-                return true;
-            }
-
-            return false;
+            return checkdnsrr($hostname, 'MX');
         }
 
         return null;
