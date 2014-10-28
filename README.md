@@ -17,12 +17,12 @@ Small PHP library to valid email addresses using a number of methods.
 ```
 
 ## Usage 
-### Main Function
+### Generalised Functions
 
 * ```isValid($email)``` Runs all the tests within this library. Returns true or false.
 * ```isSendable($email)``` Checks isEmail, isExample and hasMx. Returns true or false.
 
-### Other Functions
+### Specific Functions
 If you want more control, use these functions seperately. 
 
 * ```isEmail($email)``` Note: returns true or false only.
