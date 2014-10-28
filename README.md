@@ -19,7 +19,8 @@ Small PHP library to valid email addresses using a number of methods.
 ## Usage 
 ### Main Function
 
-* ```isValid($email)``` is the main function and it'll run all the tests within this library. Returns true or false.
+* ```isValid($email)``` Runs all the tests within this library. Returns true or false.
+* ```isSendable($email)``` Checks isEmail, isExample and hasMx. Returns true or false.
 
 ### Other Functions
 If you want more control, use these functions seperately. 
@@ -45,6 +46,10 @@ $validator = new \EmailValidator\Validator();
 $validator->isValid('example@google.com');              // true
 $validator->isValid('abuse@google.com');                // false
 $validator->isValid('example@example.com');             // false
+
+$validator->isSendable('example@google.com');           // true
+$validator->isSendable('abuse@google.com');             // true
+$validator->isSendable('example@example.com');          // false
 
 $validator->isEmail('example@example.com');             // true
 $validator->isEmail('example@example');                 // false

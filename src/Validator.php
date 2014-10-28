@@ -89,6 +89,32 @@ class Validator
     }
 
     /**
+     * Validate an email address using isEmail, isExample and hasMx.
+     *
+     * @param string $email Address
+     * @return boolean
+     */
+    public function isSendable($email)
+    {
+        // Looks like an email address
+        if (! $this->isEmail($email)) {
+            return false;
+        }
+
+        // Looks like an email address
+        if ($this->isExample($email)) {
+            return false;
+        }
+
+        // Looks like an email address
+        if (! $this->hasMx($email)) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
      * Valid email
      * Due complexity of email validation (non-latin chars, ", ...), this is VERY simple.
      *
