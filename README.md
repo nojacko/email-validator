@@ -42,14 +42,15 @@ These functions take a single argument (an email address) and return:
 ```
 $validator = new \EmailValidator\Validator();
 
-$validator->isValid('example@gmail.com');               // true
-$validator->isValid('example@example');                 // false
+$validator->isValid('example@google.com');              // true
+$validator->isValid('abuse@google.com');                // false
+$validator->isValid('example@example.com');             // false
 
 $validator->isEmail('example@example.com');             // true
 $validator->isEmail('example@example');                 // false
 
 $validator->isExample('example@example.com');           // true
-$validator->isExample('example@gmail.com');             // false
+$validator->isExample('example@google.com');            // false
 $validator->isExample('example.com);                    // null
 
 $validator->isDisposable('example@example.com');        // false
@@ -61,7 +62,7 @@ $validator->isRole('abuse@example.com');                // true
 $validator->isRole('example.com);                       // null
 
 $validator->hasMx('example@example.com');               // false
-$validator->hasMx('example@gmail.com');                 // true
+$validator->hasMx('example@google.com');                // true
 $validator->hasMx('example.com);                        // null
 ```
 

@@ -31,7 +31,7 @@ class isDisposableTest extends PHPUnit_Framework_TestCase
         );
 
         $this->assertFalse(
-            $this->validator->isDisposable('example@gmail.com')
+            $this->validator->isDisposable('example@google.com')
         );
 
         $this->assertTrue(

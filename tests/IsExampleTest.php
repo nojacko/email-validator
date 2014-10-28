@@ -28,7 +28,7 @@ class IsExampleTest extends PHPUnit_Framework_TestCase
 
         // Normal
         $this->assertFalse(
-            $this->validator->isExample('example@gmail.com')
+            $this->validator->isExample('example@google.com')
         );
 
         // Example TDLs

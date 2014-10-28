@@ -48,7 +48,7 @@ class IsValidTest extends PHPUnit_Framework_TestCase
 
         // Passes
         $this->assertTrue(
-            $this->validator->isValid('example@gmail.com')
+            $this->validator->isValid('example@google.com')
         );
     }
 }

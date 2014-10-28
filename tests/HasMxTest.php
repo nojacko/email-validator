@@ -33,7 +33,7 @@ class HasMxTest extends PHPUnit_Framework_TestCase
 
         // Records
         $this->assertTrue(
-            $this->validator->hasMx('example@gmail.com')
+            $this->validator->hasMx('example@google.com')
         );
 
         $this->assertTrue(
