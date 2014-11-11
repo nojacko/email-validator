@@ -2,6 +2,8 @@
 
 Small PHP library to valid email addresses using a number of methods. 
 
+[![Build Status](https://travis-ci.org/nojacko/email-validator.svg?branch=master)](https://travis-ci.org/nojacko/email-validator)
+
 ## Features
 
 * Validates email address
