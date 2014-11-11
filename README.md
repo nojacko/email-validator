@@ -12,10 +12,9 @@ Small PHP library to valid email addresses using a number of methods.
 * Checks for **role-based** addresses (e.g. abuse@)
 * Checks for **MX records** (i.e. can receive email)
 
-## Install
-### Composer
+## Install (using Composer)
 ```
-"nojacko/email-validator": "*"
+composer require nojacko/email-validator:~1.0
 ```
 
 ## Usage 
