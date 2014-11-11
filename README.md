@@ -82,10 +82,15 @@ Run tests with phpunit. In root folder, execute ```phpunit``` in a CLI.
 
 ## Contribute
 
-* Fork it
-* Write tests ([Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development))
-* Write code (Follow [PSR-2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md))
-* Submit pull request
+Contributions welcome! If you're planning a new feature, please raise an issue first to ensure it's in scope. The aim is to keep this library small and with one specific purpose.
+
+For anything that isn't a new feature (bug fix, new disposible domains, etc) just create a pull request. 
+
+### REQUIREMENTS
+
+* [Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development)
+* Follow [PSR-2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
+* One change per pull request
 
 ## License
 
