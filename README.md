@@ -1,4 +1,4 @@
-# Email Validator (beta)
+# Email Validator (1.0.0)
 
 Small PHP library to valid email addresses using a number of methods. 
 
