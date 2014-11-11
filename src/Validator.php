@@ -179,7 +179,6 @@ class Validator
         $hostname = $this->hostnameFromEmail($email);
 
         if ($hostname) {
-
             // Load disposable domains
             if (is_null($this->disposable)) {
                 $this->disposable = include('data/disposable.php');
