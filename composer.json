@@ -1,6 +1,19 @@
 {
     "name": "nojacko/email-validator",
-    "description": "Email Validator",
+    "description": "Small PHP library to valid email addresses using a number of methods.",
+    "keywords": [
+        "email",
+        "email address",
+        "validation",
+        "validater",
+        "check",
+        "checker",
+        "mx",
+        "disposable",
+        "throwaway",
+        "role",
+        "library"
+    ],
     "authors": [
         {
             "name": "James Jackson",
