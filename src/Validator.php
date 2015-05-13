@@ -60,27 +60,27 @@ class Validator
      */
     public function isValid($email)
     {
-        // Looks like an email address
+        // Does it look like an email address?
         if (! $this->isEmail($email)) {
             return false;
         }
 
-        // Looks like an email address
+        // Is is an example domain?
         if ($this->isExample($email)) {
             return false;
         }
 
-        // Looks like an email address
+        // Is is a it disposable?
         if ($this->isDisposable($email)) {
             return false;
         }
 
-        // Looks like an email address
+        // Is it role based?
         if ($this->isRole($email)) {
             return false;
         }
 
-        // Looks like an email address
+        // Does it have an MX record?
         if (! $this->hasMx($email)) {
             return false;
         }
@@ -96,17 +96,17 @@ class Validator
      */
     public function isSendable($email)
     {
-        // Looks like an email address
+        // Does it look like an email address?
         if (! $this->isEmail($email)) {
             return false;
         }
 
-        // Looks like an email address
+        // Is is an example domain?
         if ($this->isExample($email)) {
             return false;
         }
 
-        // Looks like an email address
+        // Does it have an MX record?
         if (! $this->hasMx($email)) {
             return false;
         }
