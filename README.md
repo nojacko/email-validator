@@ -1,4 +1,4 @@
-# Email Validator (1.0.0)
+# Email Validator (1.0)
 
 Small PHP library to valid email addresses using a number of methods. 
 
@@ -13,15 +13,18 @@ Small PHP library to valid email addresses using a number of methods.
 * Checks for **MX records** (i.e. can receive email)
 
 ## Install (using Composer)
+
 ```
 composer require nojacko/email-validator:~1.0
 ```
 
 ## Usage 
+
 ### Generalised Functions
 
 * ```isValid($email)``` Runs all the tests within this library. Returns true or false.
 * ```isSendable($email)``` Checks isEmail, isExample and hasMx. Returns true or false.
+
 
 ### Specific Functions
 If you want more control, use these functions seperately. 
@@ -57,19 +60,19 @@ $validator->isEmail('example@example');                 // false
 
 $validator->isExample('example@example.com');           // true
 $validator->isExample('example@google.com');            // false
-$validator->isExample('example.com');                    // null
+$validator->isExample('example.com');                   // null
 
 $validator->isDisposable('example@example.com');        // false
 $validator->isDisposable('example@mailinater.com');     // true
-$validator->isDisposable('example.com');                 // null
+$validator->isDisposable('example.com');                // null
 
 $validator->isRole('example@example.com');              // false
 $validator->isRole('abuse@example.com');                // true
-$validator->isRole('example.com');                       // null
+$validator->isRole('example.com');                      // null
 
 $validator->hasMx('example@example.com');               // false
 $validator->hasMx('example@google.com');                // true
-$validator->hasMx('example.com');                        // null
+$validator->hasMx('example.com');                       // null
 ```
 
 ## Testing
@@ -79,17 +82,24 @@ Test are all located in ```tests``` folder.
 Run tests with phpunit. In root folder, execute ```phpunit``` in a CLI.
 
 
+## Versioning 
+
+[Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html)
+
+
 ## Contribute
 
 Contributions welcome! If you're planning a new feature, please raise an issue first to ensure it's in scope. The aim is to keep this library small and with one specific purpose.
 
 For anything that isn't a new feature (bug fix, new disposible domains, etc) just create a pull request. 
 
+
 ### REQUIREMENTS
 
 * [Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development)
 * Follow [PSR-2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 * One change per pull request
+
 
 ## License
 
