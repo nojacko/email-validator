@@ -1,6 +1,6 @@
 # Email Validator (1.0)
 
-Small PHP library to valid email addresses using a number of methods. 
+Small PHP library to valid email addresses using a number of methods.
 
 [![License](https://img.shields.io/github/license/nojacko/email-validator.svg)](https://github.com/nojacko/email-validator/blob/master/LICENSE)
 [![Build Status](https://img.shields.io/travis/nojacko/email-validator.svg)](https://travis-ci.org/nojacko/email-validator)
@@ -22,7 +22,7 @@ Small PHP library to valid email addresses using a number of methods.
 composer require nojacko/email-validator:~1.0
 ```
 
-## Usage 
+## Usage
 
 ### Generalised Functions
 
@@ -31,7 +31,7 @@ composer require nojacko/email-validator:~1.0
 
 
 ### Specific Functions
-If you want more control, use these functions seperately. 
+If you want more control, use these functions seperately.
 
 * ```isEmail($email)``` Note: returns true or false only.
 * ```isExample($email)```
@@ -86,7 +86,7 @@ Test are all located in ```tests``` folder.
 Run tests with phpunit. In root folder, execute ```phpunit``` in a CLI.
 
 
-## Versioning 
+## Versioning
 
 [Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html)
 
@@ -95,7 +95,7 @@ Run tests with phpunit. In root folder, execute ```phpunit``` in a CLI.
 
 Contributions welcome! If you're planning a new feature, please raise an issue first to ensure it's in scope. The aim is to keep this library small and with one specific purpose.
 
-For anything that isn't a new feature (bug fix, new disposible domains, etc) just create a pull request. 
+For anything that isn't a new feature (bug fix, new disposible domains, etc) just create a pull request.
 
 
 ### REQUIREMENTS
