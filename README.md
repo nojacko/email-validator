@@ -2,7 +2,11 @@
 
 Small PHP library to valid email addresses using a number of methods. 
 
-[![Build Status](https://travis-ci.org/nojacko/email-validator.svg?branch=master)](https://travis-ci.org/nojacko/email-validator)
+[![License](https://img.shields.io/github/license/nojacko/email-validator.svg)](https://github.com/nojacko/email-validator/blob/master/LICENSE)
+[![Build Status](https://img.shields.io/travis/nojacko/email-validator.svg)](https://travis-ci.org/nojacko/email-validator)
+[![Code Quality](https://img.shields.io/codacy/7b3a2c246622431abd1fc4e2750aae1b.svg)](https://www.codacy.com/app/nojacko/email-validator)
+[![Downloads](https://img.shields.io/packagist/dm/nojacko/email-validator.svg)](https://packagist.org/packages/nojacko/email-validator)
+[![Github Stars](https://img.shields.io/github/stars/nojacko/email-validator.svg)](https://github.com/nojacko/email-validator/stargazers)
 
 ## Features
 
