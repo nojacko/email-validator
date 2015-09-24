@@ -79,6 +79,26 @@ $validator->hasMx('example@google.com');                // true
 $validator->hasMx('example.com');                       // null
 ```
 
+## Contribute
+
+Contributions welcome!
+
+### Requirements
+
+* [Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development)
+* Follow [PSR-2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
+* One change per pull request
+
+### Add/Remove Disposable Domain
+See the  [email-data-disposable](https://github.com/nojacko/email-data-disposable) project.
+
+### New Feature
+If you're planning a new feature, please raise an issue first to ensure it's in scope. The aim is to keep this library small and with one specific purpose.
+
+### Other Contributions
+For anything that isn't a new feature (bug fix, tests, etc) just create a pull request.
+
+
 ## Testing
 
 Test are all located in ```tests``` folder.
@@ -89,21 +109,6 @@ Run tests with phpunit. In root folder, execute ```phpunit``` in a CLI.
 ## Versioning
 
 [Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html)
-
-
-## Contribute
-
-Contributions welcome! If you're planning a new feature, please raise an issue first to ensure it's in scope. The aim is to keep this library small and with one specific purpose.
-
-For anything that isn't a new feature (bug fix, new disposible domains, etc) just create a pull request.
-
-
-### REQUIREMENTS
-
-* [Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development)
-* Follow [PSR-2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
-* One change per pull request
-
 
 ## License
 
