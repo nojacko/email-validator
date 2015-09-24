@@ -1,5 +1,4 @@
-# Email Validator (1.0)
-
+# Email Validator
 Small PHP library to valid email addresses using a number of methods.
 
 [![License](https://img.shields.io/github/license/nojacko/email-validator.svg)](https://github.com/nojacko/email-validator/blob/master/LICENSE)
@@ -9,7 +8,6 @@ Small PHP library to valid email addresses using a number of methods.
 [![Github Stars](https://img.shields.io/github/stars/nojacko/email-validator.svg)](https://github.com/nojacko/email-validator/stargazers)
 
 ## Features
-
 * Validates email address
 * Checks for **example** domains (e.g. example.com)
 * Checks for **disposable** email domains (e.g. mailinator.com)
@@ -17,15 +15,12 @@ Small PHP library to valid email addresses using a number of methods.
 * Checks for **MX records** (i.e. can receive email)
 
 ## Install (using Composer)
-
 ```
 composer require nojacko/email-validator:~1.0
 ```
 
 ## Usage
-
 ### Generalised Functions
-
 * ```isValid($email)``` Runs all the tests within this library. Returns true or false.
 * ```isSendable($email)``` Checks isEmail, isExample and hasMx. Returns true or false.
 
@@ -47,7 +42,6 @@ These functions take a single argument (an email address) and return:
 
 
 ## Examples
-
 ```
 $validator = new \EmailValidator\Validator();
 
@@ -80,11 +74,9 @@ $validator->hasMx('example.com');                       // null
 ```
 
 ## Contribute
-
 Contributions welcome!
 
 ### Requirements
-
 * [Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development)
 * Follow [PSR-2 Coding Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 * One change per pull request
@@ -100,16 +92,13 @@ For anything that isn't a new feature (bug fix, tests, etc) just create a pull r
 
 
 ## Testing
-
 Test are all located in ```tests``` folder.
 
 Run tests with phpunit. In root folder, execute ```phpunit``` in a CLI.
 
 
 ## Versioning
-
 [Semantic Versioning 2.0.0](http://semver.org/spec/v2.0.0.html)
 
 ## License
-
 The MIT License (MIT). See LICENCE file.
