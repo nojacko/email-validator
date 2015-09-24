@@ -27,5 +27,8 @@
             "EmailValidator\\": "src/"
         }
     },
-    "license": "MIT"
+    "license": "MIT",
+    "require": {
+        "nojacko/email-data-disposable": "^1.0"
+    }
 }
