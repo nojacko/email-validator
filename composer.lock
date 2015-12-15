@@ -9,19 +9,20 @@
     "packages": [
         {
             "name": "nojacko/email-data-disposable",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nojacko/email-data-disposable.git",
-                "reference": "64a2743b353587dc340786382ce062432a1fe139"
+                "reference": "c41c8683bfe52f58b1a6f09d9640cfafb9f47a61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nojacko/email-data-disposable/zipball/64a2743b353587dc340786382ce062432a1fe139",
-                "reference": "64a2743b353587dc340786382ce062432a1fe139",
+                "url": "https://api.github.com/repos/nojacko/email-data-disposable/zipball/c41c8683bfe52f58b1a6f09d9640cfafb9f47a61",
+                "reference": "c41c8683bfe52f58b1a6f09d9640cfafb9f47a61",
                 "shasum": ""
             },
             "require-dev": {
+                "ext-intl": "*",
                 "league/climate": "^3.2",
                 "php-curl-class/php-curl-class": "~2.1"
             },
@@ -42,7 +43,7 @@
                 }
             ],
             "description": "Disposable email domains",
-            "time": "2015-09-24 21:11:06"
+            "time": "2015-12-15 22:30:14"
         }
     ],
     "packages-dev": [],
