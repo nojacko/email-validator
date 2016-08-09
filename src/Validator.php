@@ -126,7 +126,11 @@ class Validator
      */
     public function isEmail($email)
     {
-        return (bool) preg_match('/^.+@.+\..+$/i', $email);
+        if (is_string($email)) {
+            return (bool) preg_match('/^.+@.+\..+$/i', $email);
+        }
+
+        return false;
     }
 
     /**

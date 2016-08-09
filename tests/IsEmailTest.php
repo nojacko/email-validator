@@ -34,6 +34,14 @@ class IsEmailTest extends PHPUnit_Framework_TestCase
             $this->validator->isEmail('example[AT]example.com')
         );
 
+        $this->assertFalse(
+            $this->validator->isEmail(null)
+        );
+
+        $this->assertFalse(
+            $this->validator->isEmail(['this', 'is', 'array'])
+        );
+
         // Valid
         $this->assertTrue(
             $this->validator->isEmail('example@example.com')
