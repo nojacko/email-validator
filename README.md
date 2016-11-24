@@ -22,7 +22,7 @@ composer require nojacko/email-validator:~1.0
 ## Usage
 ### Generalised Functions
 * ```isValid($email)``` Runs all the tests within this library. Returns true or false.
-* ```isSendable($email)``` Checks isEmail, isExample and hasMx. Returns true or false.
+* ```isSendable($email)``` Checks isEmail, isExample and hasDNS. Returns true or false.
 
 
 ### Specific Functions
@@ -32,7 +32,7 @@ If you want more control, use these functions seperately.
 * ```isExample($email)```
 * ```isDisposable($email)```
 * ```isRole($email)```
-* ```hasMx($email)```
+* ```hasDNS($email)```
 
 These functions take a single argument (an email address) and return:
 
@@ -68,9 +68,9 @@ $validator->isRole('example@example.com');              // false
 $validator->isRole('abuse@example.com');                // true
 $validator->isRole('example.com');                      // null
 
-$validator->hasMx('example@example.com');               // false
-$validator->hasMx('example@google.com');                // true
-$validator->hasMx('example.com');                       // null
+$validator->hasDNS('example@example.com');               // false
+$validator->hasDNS('example@google.com');                // true
+$validator->hasDNS('example.com');                       // null
 ```
 
 ## Contribute

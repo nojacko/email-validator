@@ -81,7 +81,7 @@ class Validator
         }
 
         // Does it have an MX record?
-        if (! $this->hasMx($email)) {
+        if (! $this->hasDNS($email)) {
             return false;
         }
 
@@ -89,7 +89,7 @@ class Validator
     }
 
     /**
-     * Validate an email address using isEmail, isExample and hasMx.
+     * Validate an email address using isEmail, isExample and hasDNS.
      *
      * @param string $email Address
      * @return boolean
@@ -107,7 +107,7 @@ class Validator
         }
 
         // Does it have an MX record?
-        if (! $this->hasMx($email)) {
+        if (! $this->hasDNS($email)) {
             return false;
         }
 
@@ -233,12 +233,12 @@ class Validator
     }
 
     /**
-     * Test email address for MX records
+     * Test email address for MX, A, or AAAA records
      *
      * @param string $email Address
      * @return boolean|null
      */
-    public function hasMx($email)
+    public function hasDNS($email)
     {
         if (! $this->isEmail($email)) {
             return null;
@@ -247,7 +247,7 @@ class Validator
         $hostname = $this->hostnameFromEmail($email);
 
         if ($hostname) {
-            return checkdnsrr($hostname, 'MX');
+            return checkdnsrr($hostname, 'MX') || checkdnsrr($hostname, 'A') || checkdnsrr($hostname, 'AAAA');
         }
 
         return null;
